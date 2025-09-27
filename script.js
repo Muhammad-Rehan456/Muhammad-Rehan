@@ -106,5 +106,12 @@ menuItems.forEach(link => {
     type();
   }); 
 
+   function downloadPDF() {
+    const link = document.createElement('a');
+    link.href = 'resume.pdf.pdf';
+    link.download = 'Rehan-Resume.pdf';
+    link.click();
+  }
+
 
 
