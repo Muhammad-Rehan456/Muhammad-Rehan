@@ -62,7 +62,9 @@ menuItems.forEach(link => {
     const isClickInsideMenu = menu.contains(e.target);
     const isClickOnHamburger = hamburger.contains(e.target);
 
-    if (!isClickInsideMenu && !isClickOnHamburger && menu.classList.contains('show')) {
+    if (!isClickInsideMenu && 
+      !isClickOnHamburger && 
+      menu.classList.contains('show')) {
       menu.classList.remove('show');
     }
 
@@ -72,11 +74,11 @@ menuItems.forEach(link => {
 
  const typedText = document.querySelector(".naming")
   const words = [" Web Developer "," Javascript Developer ", " Programmer "];
-  let wordIndex = 0;
-  let charIndex = 0;
   let isDeleting = false;
-  let typingSpeed = 100;
+  let wordIndex = 0;
   let pauseBetweenWords = 1500;
+  let typingSpeed = 100;
+  let charIndex = 0;
 
   function type() {
     const currentWord = words[wordIndex];
@@ -86,7 +88,7 @@ menuItems.forEach(link => {
       typedText.textContent = currentWord.substring(0, charIndex++);
     }
 
-    // Control typing speed
+
     let delay = typingSpeed;
 
     if (!isDeleting && charIndex === currentWord.length) {
@@ -101,7 +103,7 @@ menuItems.forEach(link => {
     setTimeout(type, delay);
   }
 
-  // Start typing
+
   document.addEventListener('DOMContentLoaded', () => {
     type();
   }); 
@@ -112,6 +114,7 @@ menuItems.forEach(link => {
     link.download = 'Rehan-Resume.pdf';
     link.click();
   }
+
 
 
 
